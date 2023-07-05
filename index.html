@@ -24,8 +24,9 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header class="h-screen text-white">
+    <header class="h-screen text-white bg-fixed w-full">
       <!-- Navigation Section -->
+      <div id="blurryscroll" aria-hidden="true"></div>
       <nav
         class="pt-3 px-5 flex justify-between items-center pb-3 border-b border-white"
       >
@@ -44,7 +45,7 @@
       </nav>
 
       <!-- Header Section -->
-      <section class="pt-[3.5rem] pl-[10rem] pr-[38rem]">
+      <section id="content" class="pt-[9.5rem] pl-[10rem] pr-[38rem]">
         <div class="flex flex-col gap-5">
           <p data-aos="fade-right" class="tracking-widest font-normal">
             BEST HOTEL WITH COZY ROOMS
@@ -69,7 +70,7 @@
       </section>
     </header>
     <!-- About Section -->
-    <section class="h-screen flex px-[9rem] pt-[3rem] flex-col">
+    <section class="min-h-screen flex px-[9rem] py-[3rem] flex-col bg-fixed">
       <!-- First Section -->
       <div class="flex gap-[3rem] mb-[3.5rem]">
         <div class="flex flex-col gap-3">
@@ -103,7 +104,19 @@
           >
             ROOMS
           </p>
-          <p data-aos="fade-down" class="text-7xl old-font">01</p>
+          <p id="rooms-num" data-aos="fade-down" class="text-7xl old-font">1</p>
+          <div class="flex flex-col gap-2">
+            <div data-aos="fade-right" class="self-end">
+              <button id="rooms-inc-btn">
+                <img src="assests/Vector (1).png" alt="" srcset="" />
+              </button>
+            </div>
+            <div data-aos="fade-right" class="self-end">
+              <button id="rooms-dec-btn">
+                <img src="assests/Vector (2).png" alt="" srcset="" />
+              </button>
+            </div>
+          </div>
         </div>
 
         <div class="flex flex-col gap-3">
@@ -113,7 +126,21 @@
           >
             GUESTS
           </p>
-          <p data-aos="fade-down" class="text-7xl old-font">02</p>
+          <p id="guests-num" data-aos="fade-down" class="text-7xl old-font">
+            2
+          </p>
+          <div class="flex flex-col gap-2">
+            <div data-aos="fade-right" class="self-end">
+              <button id="guests-inc-btn">
+                <img src="assests/Vector (1).png" alt="" srcset="" />
+              </button>
+            </div>
+            <div data-aos="fade-right" class="self-end">
+              <button id="guests-dec-btn">
+                <img src="assests/Vector (2).png" alt="" srcset="" />
+              </button>
+            </div>
+          </div>
         </div>
 
         <div class="flex flex-col gap-3">
@@ -123,7 +150,21 @@
           >
             CHILDREN
           </p>
-          <p data-aos="fade-down" class="text-7xl old-font">02</p>
+          <p id="children-num" data-aos="fade-down" class="text-7xl old-font">
+            02
+          </p>
+          <div class="flex flex-col gap-2">
+            <div data-aos="fade-right" class="self-end">
+              <button id="children-inc-btn">
+                <img src="assests/Vector (1).png" alt="" srcset="" />
+              </button>
+            </div>
+            <div data-aos="fade-right" class="self-end">
+              <button id="children-dec-btn">
+                <img src="assests/Vector (2).png" alt="" srcset="" />
+              </button>
+            </div>
+          </div>
         </div>
 
         <div class="flex flex-col self-center">
@@ -148,7 +189,8 @@
             <div>
               <img
                 data-aos="fade-left"
-                src="https://placeholder.co/300x250"
+                src="assests/WhatsApp Image 2023-06-28 at 09.47 6.png"
+                width="300"
                 alt=""
                 srcset=""
               />
@@ -161,7 +203,8 @@
             <div>
               <img
                 data-aos="fade-left"
-                src="https://placeholder.co/300x250"
+                src="assests/WhatsApp Image 2023-06-28 at 09.47 8.png"
+                width="300"
                 alt=""
                 srcset=""
               />
@@ -175,7 +218,8 @@
             <div>
               <img
                 data-aos="fade-left"
-                src="https://placeholder.co/300x250"
+                src="assests/WhatsApp Image 2023-06-28 at 09.47 8.png"
+                width="300"
                 alt=""
                 srcset=""
               />
@@ -199,7 +243,7 @@
 
     <!-- Welcome Page -->
     <section
-      class="flex flex-col justify-center items-center my-44 gap-5 px-44"
+      class="welcome flex flex-col justify-center items-center py-44 h-screen text-white gap-5 px-44 bg-fixed"
     >
       <h3 data-aos="fade-up" class="old-font text-6xl">
         Welcome To Bliss Regency
@@ -213,14 +257,14 @@
       </p>
       <button
         data-aos="fade-up"
-        class="p-6 px-[5rem] ibm-font rounded-full border border-[#D2D2D2] text-[#27221F] hover:bg-[#27221F] duration-300 hover:text-white"
+        class="p-6 px-[5rem] ibm-font rounded-full border border-[#D2D2D2] text-white hover:bg-[#27221F] duration-300"
       >
         About Us
       </button>
     </section>
 
     <!-- Offer Page -->
-    <section class="flex justify-between pr-6 my-8 mb-16">
+    <section class="flex justify-between pr-6 mb-16 bg-[#F9F7F5]">
       <div class="basis-[30%]">
         <img
           data-aos="fade-right"
@@ -299,7 +343,7 @@
     </section>
 
     <!-- Achievements Section -->
-    <section class="flex flex-col px-[15rem] gap-5">
+    <section class="flex flex-col px-[15rem] gap-5 bg-fixed">
       <div>
         <h4 data-aos="zoom-in-up" class="text-4xl old-font">
           Our Achievements
@@ -373,7 +417,7 @@
 
     <!-- Comments Section -->
     <section
-      class="mt-20 py-16 mb-16 flex flex-col items-center justify-center text-center px-[15rem] ibm-font text-[#474341] bg-[#F9F7F5]"
+      class="bg-fixed mt-20 py-16 flex flex-col items-center justify-center text-center px-[15rem] ibm-font text-[#474341] bg-[#F9F7F5]"
     >
       <p data-aos="fade-right">
         This is for Bliss regency demo. This is for Bliss regency demo. This is
@@ -393,7 +437,7 @@
     </section>
 
     <!-- Image Container -->
-    <div class="h-[500px] image-container mb-14"></div>
+    <div class="h-[500px] image-container mb-14 bg-fixed"></div>
 
     <!-- Section 1 -->
     <section class="px-[6rem] pt-16 flex justify-between">
@@ -410,12 +454,12 @@
       <div class="basis-[45%] flex flex-col items-center">
         <div
           data-aos="fade-right"
-          class="w-full border h-[.5px] border-[#000000]"
+          class="w-full border h-[.5px] border-[#000000] my-2"
         ></div>
 
         <img
           data-aos="fade-right"
-          src="https://placeholder.co/250x250"
+          src="assests/logo blis 17.png"
           width="200px"
           alt=""
           class="my-5"
@@ -430,7 +474,7 @@
 
         <div
           data-aos="fade-right"
-          class="w-[50%] border h-[.5px] border-[#000000] mt-5"
+          class="w-[50%] border h-[.5px] border-[#000000] mt-5 my-2"
         ></div>
 
         <p data-aos="fade-right" class="text-center tracking-[2px] px-12">
@@ -440,7 +484,7 @@
 
         <div
           data-aos="fade-right"
-          class="w-full border h-[.5px] border-[#000000]"
+          class="w-full border h-[.5px] border-[#000000] my-2"
         ></div>
       </div>
     </section>
@@ -507,13 +551,18 @@
           promotions.
         </p>
 
-        <form data-aos="fade-up" class="w-full flex rounded-full border-2">
+        <form
+          data-aos="fade-up"
+          class="signup w-full flex rounded-full border-2"
+        >
           <input
-            type="text"
-            class="px-5 p-3 placeholder:text-black w-[80%] old-font"
+            id="email-input"
+            type="email"
+            class="email-login m-[9px] px-5 p-3 placeholder:text-black w-[80%] old-font"
             placeholder="Enter Your Email Address"
           />
           <button
+            id="submit-button"
             class="w-[20%] p-3 ibm-font rounded-full border bg-[#27221F] border-[#27221F] text-white hover:bg-white duration-300 hover:text-[#27221F]"
           >
             Submit
