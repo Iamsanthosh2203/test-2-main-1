@@ -49,6 +49,9 @@ header {
   background-position: center;
   overflow: hidden;
 }
+.overlock-font {
+  font-family: "Overlock SC", cursive;
+}
 @keyframes shake {
   0% {
     margin-left: 0rem;

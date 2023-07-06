@@ -1,0 +1,66 @@
+html {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f9f7f5;
+}
+header {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(61, 53, 53, 0.863),
+      rgba(61, 53, 53, 0.863)
+    ),
+    url("assests/WhatsApp\ Image\ 2023-06-28\ at\ 09.47\ 1.png");
+}
+.links {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.heading {
+  font-family: "Old Standard TT";
+}
+.ibm-font {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.old-font {
+  font-family: "Old Standard TT";
+}
+.overlock-font {
+  font-family: "Overlock SC", cursive;
+}
+nav {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  /* filter: blur(4px); */
+}
+.blur-back {
+  backdrop-filter: blur(30px);
+  z-index: 1;
+}
+.hidden {
+  display: none;
+}
+#blurryscroll {
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  /* filter: blur(4px); */
+}
+.section-2 {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("assests/WhatsApp\ Image\ 2023-06-28\ at\ 09.47\ 5.png");
+}
