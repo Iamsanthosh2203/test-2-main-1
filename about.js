@@ -1,7 +1,7 @@
 const nav = document.querySelector("nav");
 window.addEventListener("scroll", () => {
   let value = scrollY;
-  if (value > 0) {
+  if (value > 95) {
     nav.classList.add("blur-back");
   } else {
     nav.classList.remove("blur-back");
