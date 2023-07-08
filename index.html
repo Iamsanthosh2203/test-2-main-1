@@ -21,6 +21,12 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Flat Picker -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
   </head>
   <body>
     <!-- Header Section -->
@@ -35,7 +41,7 @@
           <a href="index.html">HOME</a>
           <a href="about.html">ABOUT US</a>
           <a href="rooms.html">ROOMS</a>
-          <a href="#">SERVICES</a>
+          <a href="services.html">SERVICES</a>
           <a href="#">RESTAURANT</a>
           <a href="#">CONTACT</a>
         </div>
@@ -80,9 +86,19 @@
           >
             ARRIVAL
           </p>
-          <p data-aos="fade-down" class="text-7xl old-font">
-            24 <span class="text-lg ibm-font">Jan</span>
-          </p>
+          <div class="flex gap-5 items-center">
+            <p id="arrivalDate" data-aos="fade-down" class="text-7xl old-font">
+              24
+            </p>
+            <span id="arrivalMonth" class="text-lg ibm-font">Jan</span>
+          </div>
+          <input
+            id="arrival"
+            type="datetime"
+            placeholder="Click For Arrival"
+            value=""
+            class="text-lg ibm-font placeholder:text-black cursor-pointer"
+          />
         </div>
 
         <div class="flex flex-col gap-3">
@@ -90,11 +106,24 @@
             data-aos="fade-right"
             class="tracking-wide text-[#474341] ibm-font font-light"
           >
-            DEPATURE
+            DEPARTURE
           </p>
-          <p data-aos="fade-down" class="text-7xl old-font">
-            28 <span data-aos="fade-down" class="text-lg ibm-font">Jan</span>
-          </p>
+          <div class="flex gap-5 items-center">
+            <p
+              id="departureDate"
+              data-aos="fade-down"
+              class="text-7xl old-font"
+            >
+              24
+            </p>
+            <span id="departureMonth" class="text-lg ibm-font">Jan</span>
+          </div>
+          <input
+            id="departure"
+            type="departure"
+            placeholder="Click For Departure"
+            class="text-lg ibm-font placeholder:text-black cursor-pointer"
+          />
         </div>
 
         <div class="flex flex-col gap-3">
@@ -104,16 +133,28 @@
           >
             ROOMS
           </p>
-          <p id="rooms-num" data-aos="fade-down" class="text-7xl old-font">1</p>
-          <div class="flex flex-col gap-2">
-            <div data-aos="fade-right" class="self-end">
-              <button id="rooms-inc-btn">
-                <img src="assests/Vector (1).png" alt="" srcset="" />
+          <div class="flex gap-2 items-center">
+            <div data-aos="fade-right">
+              <button id="rooms-dec-btn">
+                <img
+                  src="assests/Vector (1).png"
+                  class="-rotate-90"
+                  alt=""
+                  srcset=""
+                />
               </button>
             </div>
-            <div data-aos="fade-right" class="self-end">
-              <button id="rooms-dec-btn">
-                <img src="assests/Vector (2).png" alt="" srcset="" />
+            <p id="rooms-num" data-aos="fade-down" class="text-7xl old-font">
+              1
+            </p>
+            <div data-aos="fade-right">
+              <button id="rooms-inc-btn">
+                <img
+                  src="assests/Vector (2).png"
+                  alt=""
+                  class="-rotate-90"
+                  srcset=""
+                />
               </button>
             </div>
           </div>
@@ -126,18 +167,28 @@
           >
             GUESTS
           </p>
-          <p id="guests-num" data-aos="fade-down" class="text-7xl old-font">
-            2
-          </p>
-          <div class="flex flex-col gap-2">
-            <div data-aos="fade-right" class="self-end">
-              <button id="guests-inc-btn">
-                <img src="assests/Vector (1).png" alt="" srcset="" />
+          <div class="flex gap-2 items-center">
+            <div data-aos="fade-right">
+              <button id="guests-dec-btn">
+                <img
+                  src="assests/Vector (1).png"
+                  class="-rotate-90"
+                  alt=""
+                  srcset=""
+                />
               </button>
             </div>
-            <div data-aos="fade-right" class="self-end">
-              <button id="guests-dec-btn">
-                <img src="assests/Vector (2).png" alt="" srcset="" />
+            <p id="guests-num" data-aos="fade-down" class="text-7xl old-font">
+              1
+            </p>
+            <div data-aos="fade-right">
+              <button id="guests-inc-btn">
+                <img
+                  src="assests/Vector (2).png"
+                  alt=""
+                  class="-rotate-90"
+                  srcset=""
+                />
               </button>
             </div>
           </div>
@@ -150,18 +201,28 @@
           >
             CHILDREN
           </p>
-          <p id="children-num" data-aos="fade-down" class="text-7xl old-font">
-            02
-          </p>
-          <div class="flex flex-col gap-2">
-            <div data-aos="fade-right" class="self-end">
-              <button id="children-inc-btn">
-                <img src="assests/Vector (1).png" alt="" srcset="" />
+          <div class="flex gap-2 items-center">
+            <div data-aos="fade-right">
+              <button id="children-dec-btn">
+                <img
+                  src="assests/Vector (1).png"
+                  class="-rotate-90"
+                  alt=""
+                  srcset=""
+                />
               </button>
             </div>
-            <div data-aos="fade-right" class="self-end">
-              <button id="children-dec-btn">
-                <img src="assests/Vector (2).png" alt="" srcset="" />
+            <p id="children-num" data-aos="fade-down" class="text-7xl old-font">
+              1
+            </p>
+            <div data-aos="fade-right">
+              <button id="children-inc-btn">
+                <img
+                  src="assests/Vector (2).png"
+                  alt=""
+                  class="-rotate-90"
+                  srcset=""
+                />
               </button>
             </div>
           </div>
@@ -631,6 +692,11 @@
       </div>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      flatpickr("#arrival", {});
+      flatpickr("#departure", {});
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

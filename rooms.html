@@ -27,6 +27,11 @@
       href="https://fonts.googleapis.com/css2?family=Overlock+SC&display=swap"
       rel="stylesheet"
     />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
   </head>
   <body>
     <!-- Header Section -->
@@ -78,6 +83,7 @@
       <div class="flex flex-col justify-center pt-10 items-center">
         <button
           class="ibm-font w-[15%] pt-3 py-5 border border-white rounded-full"
+          onclick="window.location.href='rooms.html#roomsSec'"
         >
           Explore Rooms
         </button>
@@ -86,7 +92,7 @@
 
     <!-- Explore Section -->
     <section class="py-6">
-      <h2 class="overlock-font underline text-center text-4xl">
+      <h2 id="roomsSec" class="overlock-font underline text-center text-4xl">
         EXPLORE OUR ROOMS
       </h2>
     </section>
@@ -104,7 +110,9 @@
         data-aos="fade-right"
         class="basis-[40%] flex flex-col justify-around items-center"
       >
-        <h3 class="overlock-font text-center text-2xl">ROYAL SUITES</h3>
+        <h3 id="royal" class="overlock-font text-center text-2xl">
+          ROYAL SUITES
+        </h3>
         <p class="text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
           adipisci nam necessitatibus autem, neque labore deserunt non
@@ -135,7 +143,9 @@
         data-aos="fade-left"
         class="basis-[40%] flex flex-col justify-around items-center"
       >
-        <h3 class="overlock-font text-center text-2xl">DULEX ROOMS</h3>
+        <h3 id="dulex" class="overlock-font text-center text-2xl">
+          DULEX ROOMS
+        </h3>
         <p class="text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
           adipisci nam necessitatibus autem, neque labore deserunt non
@@ -164,7 +174,9 @@
         data-aos="fade-right"
         class="basis-[40%] flex flex-col justify-around items-center"
       >
-        <h3 class="overlock-font text-center text-2xl">EXECUTIVE ROOMS</h3>
+        <h3 id="exe" class="overlock-font text-center text-2xl">
+          EXECUTIVE ROOMS
+        </h3>
         <p class="text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
           adipisci nam necessitatibus autem, neque labore deserunt non
@@ -195,7 +207,9 @@
         data-aos="fade-right"
         class="basis-[40%] flex flex-col justify-around items-center"
       >
-        <h3 class="overlock-font text-center text-2xl">EXECUTIVE TWIN BED</h3>
+        <h3 id="exeTwin" class="overlock-font text-center text-2xl">
+          EXECUTIVE TWIN BED
+        </h3>
         <p class="text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
           adipisci nam necessitatibus autem, neque labore deserunt non

@@ -1,0 +1,34 @@
+html {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.253),
+      rgba(0, 0, 0, 0.253)
+    ),
+    url("assests/WhatsApp\ Image\ 2023-06-28\ at\ 09.47\ 1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.links {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.heading {
+  font-family: "Old Standard TT";
+}
+.ibm-font {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+.old-font {
+  font-family: "Old Standard TT";
+}
+.none {
+  display: none;
+}
