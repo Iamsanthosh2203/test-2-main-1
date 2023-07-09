@@ -35,30 +35,48 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header class="h-screen text-white bg-fixed w-full">
+    <header class="h-auto md:h-screen text-white bg-fixed w-full">
       <!-- Navigation Section -->
       <div id="blurryscroll" aria-hidden="true"></div>
       <nav
-        class="pt-3 px-5 flex justify-between items-center pb-3 border-b border-white z-10"
+        class="pt-3 px-5 flex justify-between items-center pb-3 border-b border-white relative z-10 bg-fixed"
       >
-        <img style="width: 7%" src="assests/logo blis 1.png" alt="" srcset="" />
-        <div class="flex gap-6 links">
-          <a href="index.html">HOME</a>
+        <img
+          class="w-[20%] md:w-[7%]"
+          src="assests/logo blis 1.png"
+          alt=""
+          srcset=""
+        />
+        <div class="gap-6 links hidden md:flex">
+          <a href="index.html" class="underline underline-offset-8">HOME</a>
           <a href="about.html">ABOUT US</a>
-          <a href="rooms.html" class="underline underline-offset-8">ROOMS</a>
+          <a href="rooms.html">ROOMS</a>
           <a href="services.html">SERVICES</a>
           <a href="#">RESTAURANT</a>
           <a href="#">CONTACT</a>
         </div>
-        <button class="bg-transparent py-3 px-5 border rounded-full">
+        <button
+          class="bg-transparent py-3 px-5 border rounded-full hidden md:block"
+        >
           BOOK NOW
         </button>
+
+        <div class="flex flex-row-reverse gap-3 md:hidden">
+          <button id="menuBtn" class="text-xl">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button
+            class="bg-transparent py-2 px-2 text-sm border rounded-full block md:hidden"
+          >
+            BOOK NOW
+          </button>
+        </div>
       </nav>
 
       <!-- Header Section -->
       <section
         id="content"
-        class="pt-[7.5rem] pl-[5rem] pr-8 pb-11 flex justify-between items-center"
+        class="md:pt-[7.5rem] pt-4 pl-3 pr-3 flex-col md:flex-row md:pl-[5rem] md:pr-8 pb-11 flex justify-between items-center"
       >
         <div class="flex flex-col gap-5">
           <p
@@ -69,36 +87,59 @@
           </p>
           <h1
             data-aos="zoom-out-down"
-            class="heading text-6xl text-white font-bold"
+            class="heading text-4xl md:text-6xl text-white font-bold"
           >
             DISCOVER <br />PALAKKAD
           </h1>
         </div>
 
-        <div class="flex">
+        <div class="md:flex hidden">
           <img src="assests/logo blis 18.png" width="300" alt="" srcset="" />
         </div>
       </section>
-
-      <div class="flex flex-col justify-center pt-10 items-center">
+      <div
+        class="flex flex-row md:flex-col justify-center py-4 mx-6 md:mx-0 md:pt-10 items-center"
+      >
         <button
-          class="ibm-font w-[15%] pt-3 py-5 border border-white rounded-full"
+          class="ibm-font w-full md:w-[15%] pt-3 py-5 border border-white rounded-full"
           onclick="window.location.href='rooms.html#roomsSec'"
         >
           Explore Rooms
         </button>
       </div>
+
+      <div
+        id="menu"
+        class="h-full w-full bg-black text-white absolute top-0 z-50 hidden flex-col justify-center items-center px-14 gap-4 md:hidden"
+      >
+        <button id="closeBtn" class="flex w-full">
+          <i
+            class="fa-solid fa-xmark self-end absolute top-[20px] right-[20px] text-4xl"
+          ></i>
+        </button>
+
+        <a class="text-4xl old-font" href="index.html">Home</a>
+        <a class="text-4xl old-font" href="about.html">About</a>
+        <a class="text-4xl old-font" href="rooms.html">Rooms</a>
+        <a class="text-4xl old-font" href="">Resturant</a>
+        <a class="text-4xl old-font" href="">Contact</a>
+      </div>
     </header>
 
     <!-- Explore Section -->
     <section class="py-6">
-      <h2 id="roomsSec" class="overlock-font underline text-center text-4xl">
+      <h2
+        id="roomsSec"
+        class="overlock-font underline text-center text-xl md:text-4xl"
+      >
         EXPLORE OUR ROOMS
       </h2>
     </section>
 
     <!-- Image Section 1 -->
-    <section class="flex justify-between py-6 pb-16 mb-10 px-7">
+    <section
+      class="flex flex-col gap-8 md:flex-row md:gap-0 justify-between py-6 pb-16 mb-10 px-4 md:px-7"
+    >
       <div data-aos="zoom-in-right" class="basis-[40%]">
         <img
           class="w-full h-full"
@@ -108,12 +149,12 @@
       </div>
       <div
         data-aos="fade-right"
-        class="basis-[40%] flex flex-col justify-around items-center"
+        class="basis-[40%] flex gap-4 md:gap-0 flex-col justify-around items-center"
       >
         <h3 id="royal" class="overlock-font text-center text-2xl">
           ROYAL SUITES
         </h3>
-        <p class="text-lg">
+        <p class="text-lg text-center md:text-left">
           At the Bliss Regency Palakkad, enjoy elegance and majestic nature in
           our Royal Suite. Experience a new level of luxury in a room that is
           big and beautifully decorated. Experience opulent comforts including a
@@ -121,7 +162,7 @@
         </p>
         <button
           onclick="window.location.href='royal-suite.html'"
-          class="old-font text-lg w-[40%] p-3 border-2 border-black hover:bg-black hover:text-white duration-500"
+          class="old-font text-lg w-full md:w-[40%] p-3 border-2 border-black hover:bg-black hover:text-white duration-500"
         >
           SELECT ROOMS
         </button>
@@ -130,7 +171,7 @@
 
     <!-- Image Section 2 -->
     <section
-      class="section-2 bg-fixed flex flex-row-reverse justify-between py-6 pb-16 mb-10 px-7 text-white"
+      class="section-2 bg-fixed flex flex-col gap-8 md:gap-0 md:flex-row-reverse justify-between py-6 pb-16 mb-10 px-4 md:px-7 text-white"
     >
       <div data-aos="zoom-in-right" class="basis-[40%]">
         <img
@@ -141,12 +182,12 @@
       </div>
       <div
         data-aos="fade-left"
-        class="basis-[40%] flex flex-col justify-around items-center"
+        class="basis-[40%] flex gap-4 md:gap-0 flex-col justify-around items-center"
       >
         <h3 id="dulex" class="overlock-font text-center text-2xl">
           DULEX ROOMS
         </h3>
-        <p class="text-lg">
+        <p class="text-lg text-center md:text-left">
           Experience pure bliss in our Deluxe Room with Balcony at Bliss Regency
           Palakkad. Enjoy spacious elegance and modern amenities in this
           tranquil retreat. Step out onto your private balcony and soak in
@@ -154,7 +195,7 @@
         </p>
         <button
           onclick="window.location.href='dulex-room.html'"
-          class="old-font text-lg w-[40%] p-3 border-2 hover:bg-white hover:text-black duration-500"
+          class="old-font text-lg w-full md:w-[40%] p-3 border-2 hover:bg-white hover:text-black duration-500"
         >
           SELECT ROOMS
         </button>
@@ -162,39 +203,8 @@
     </section>
 
     <!-- Image Section 3 -->
-    <section class="flex justify-between py-6 pb-16 mb-10 px-7">
-      <div data-aos="zoom-in-left" class="basis-[40%]">
-        <img
-          class="w-full h-full"
-          src="assests/WhatsApp Image 2023-06-28 at 09.47 8.png"
-          alt=""
-        />
-      </div>
-      <div
-        data-aos="fade-right"
-        class="basis-[40%] flex flex-col justify-around items-center"
-      >
-        <h3 id="exe" class="overlock-font text-center text-2xl">
-          EXECUTIVE ROOMS
-        </h3>
-        <p class="text-lg">
-          Enjoy in the classiness and luxury of our Executive Rooms. Take in the
-          elegant atmosphere and modern furnishings of these luxurious
-          apartments. The cosy atmosphere of our Executive Rooms will let you
-          unwind and enjoy a memorable stay at the Bliss Regency Palakkad.
-        </p>
-        <button
-          onclick="window.location.href='executive-room.html'"
-          class="old-font text-lg w-[40%] p-3 border-2 border-black hover:bg-black hover:text-white duration-500"
-        >
-          SELECT ROOMS
-        </button>
-      </div>
-    </section>
-
-    <!-- Image Section 4 -->
     <section
-      class="section-2 bg-fixed text-white flex flex-row-reverse justify-between py-6 pb-16 mb-10 px-7"
+      class="flex flex-col gap-8 md:flex-row md:gap-0 justify-between py-6 pb-16 mb-10 px-4 md:px-7"
     >
       <div data-aos="zoom-in-left" class="basis-[40%]">
         <img
@@ -205,12 +215,45 @@
       </div>
       <div
         data-aos="fade-right"
-        class="basis-[40%] flex flex-col justify-around items-center"
+        class="basis-[40%] flex gap-4 md:gap-0 flex-col justify-around items-center"
+      >
+        <h3 id="exe" class="overlock-font text-center text-2xl">
+          EXECUTIVE ROOMS
+        </h3>
+        <p class="text-lg text-center md:text-left">
+          Enjoy in the classiness and luxury of our Executive Rooms. Take in the
+          elegant atmosphere and modern furnishings of these luxurious
+          apartments. The cosy atmosphere of our Executive Rooms will let you
+          unwind and enjoy a memorable stay at the Bliss Regency Palakkad.
+        </p>
+        <button
+          onclick="window.location.href='executive-room.html'"
+          class="old-font text-lg w-full md:w-[40%] p-3 border-2 border-black hover:bg-black hover:text-white duration-500"
+        >
+          SELECT ROOMS
+        </button>
+      </div>
+    </section>
+
+    <!-- Image Section 4 -->
+    <section
+      class="section-2 bg-fixed flex flex-col gap-8 md:gap-0 md:flex-row-reverse justify-between py-6 pb-16 mb-10 px-4 md:px-7 text-white"
+    >
+      <div data-aos="zoom-in-left" class="basis-[40%]">
+        <img
+          class="w-full h-full"
+          src="assests/WhatsApp Image 2023-06-28 at 09.47 8.png"
+          alt=""
+        />
+      </div>
+      <div
+        data-aos="fade-right"
+        class="basis-[40%] flex gap-4 md:gap-0 flex-col justify-around items-center"
       >
         <h3 id="exeTwin" class="overlock-font text-center text-2xl">
           EXECUTIVE TWIN BED
         </h3>
-        <p class="text-lg">
+        <p class="text-lg text-center md:text-left">
           Relax in our Executive Twin Bed room's luxury and sophistication. This
           room offers a peaceful escape with two comfortable beds and attractive
           furnishings. Our Executive Twin Bed room at the Bliss Regency Palakkad
@@ -218,7 +261,7 @@
         </p>
         <button
           onclick="window.location.href='executive-twinbed.html'"
-          class="old-font text-lg w-[40%] p-3 border-2 hover:bg-white hover:text-black duration-500"
+          class="old-font text-lg w-full md:w-[40%] p-3 border-2 hover:bg-white hover:text-black duration-500"
         >
           <div class="ml-4">SELECT ROOMS</div>
         </button>
@@ -226,7 +269,9 @@
     </section>
 
     <!-- Achievements Section -->
-    <section class="flex flex-col px-[15rem] py-12 gap-5 bg-fixed bg-white">
+    <section
+      class="flex flex-col px-4 md:px-[15rem] py-6 gap-5 bg-fixed bg-white"
+    >
       <div>
         <h4 data-aos="zoom-in-up" class="text-4xl old-font">
           Our Achievements
@@ -236,10 +281,10 @@
         </p>
       </div>
       <div class="mt-6 flex justify-between">
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center md:items-start">
           <p
             data-aos="zoom-in-right"
-            class="text-6xl old-font text-[#27221F] font-bold"
+            class="text-2xl md:text-6xl old-font text-[#27221F] font-bold"
           >
             1.5K
           </p>
@@ -251,10 +296,10 @@
           </p>
         </div>
 
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center md:items-start">
           <p
             data-aos="zoom-in-right"
-            class="text-6xl old-font text-[#27221F] font-bold"
+            class="text-2xl md:text-6xl old-font text-[#27221F] font-bold"
           >
             16
           </p>
@@ -266,10 +311,10 @@
           </p>
         </div>
 
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center md:items-start">
           <p
             data-aos="zoom-in-right"
-            class="text-6xl old-font text-[#27221F] font-bold"
+            class="text-2xl md:text-6xl old-font text-[#27221F] font-bold"
           >
             5
           </p>
@@ -281,10 +326,10 @@
           </p>
         </div>
 
-        <div class="flex flex-col">
+        <div class="flex flex-col items-center md:items-start">
           <p
             data-aos="zoom-in-right"
-            class="text-6xl old-font text-[#27221F] font-bold"
+            class="text-2xl md:text-6xl old-font text-[#27221F] font-bold"
           >
             30
           </p>
@@ -299,17 +344,28 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-[#F9F7F5] flex justify-between mt-24 px-7 py-6 pr-14">
-      <img src="assests/logo blis 1.png" alt="" srcset="" />
+    <footer
+      class="bg-[#F9F7F5] flex flex-col md:flex-row justify-between mt-7 md:mt-24 px-3 md:px-7 py-6 pr-4 md:pr-14 items-center md:items-start"
+    >
+      <img
+        class="w-24 md:w-[10%]"
+        src="assests/logo blis 1.png"
+        alt=""
+        srcset=""
+      />
 
-      <div class="flex flex-col">
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">About Us</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
 
-      <div>
-        <p class="old-font text-lg">Quick Links</p>
-        <div class="flex flex-col mt-3 text-[#474341]">
+      <div class="flex flex-col w-full md:w-[10%]">
+        <p class="old-font text-lg mr-4 md:mr-0">Quick Links</p>
+        <div
+          class="flex flex-row md:flex-col w-[100%] justify-between md:justify-normal items-center md:items-start md:w-auto md:mt-3 mt-0 text-[#474341]"
+        >
           <a href="">Bookings</a>
           <a href="">Rooms</a>
           <a href="">Services</a>
@@ -317,20 +373,26 @@
         </div>
       </div>
 
-      <div>
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">Contact</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
 
-      <div>
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">Get Social</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
     </footer>
 
     <!-- Copyright Section -->
-    <section class="bg-[#F9F7F5] py-5 flex justify-around">
-      <p class="text-[#474341]">
+    <section
+      class="bg-[#F9F7F5] py-5 flex flex-col md:flex-row items-center gap-3 md:gap-0 md:items-start justify-around px-3 md:px-0"
+    >
+      <p class="text-[#474341] text-center md:text-left">
         © 2021 Copyright Bliss regency. All rights reserved
       </p>
       <div class="flex">

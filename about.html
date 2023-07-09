@@ -23,14 +23,15 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
-    <header class="h-screen text-white bg-fixed w-full sticky z-0">
+    <!-- Header Section -->
+    <header class="h-auto md:h-screen text-white bg-fixed w-full">
       <!-- Navigation Section -->
       <div id="blurryscroll" aria-hidden="true"></div>
       <nav
         class="pt-3 px-5 flex justify-between items-center pb-3 border-b border-white relative z-10 bg-fixed"
       >
         <img
-          class="w-[10%] md:w-[7%]"
+          class="w-[20%] md:w-[7%]"
           src="assests/logo blis 1.png"
           alt=""
           srcset=""
@@ -49,14 +50,21 @@
           BOOK NOW
         </button>
 
-        <button id="menuBtn" class="text-xl block md:hidden">
-          <i class="fa-solid fa-bars"></i>
-        </button>
+        <div class="flex flex-row-reverse gap-3 md:hidden">
+          <button id="menuBtn" class="text-xl">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button
+            class="bg-transparent py-2 px-2 text-sm border rounded-full block md:hidden"
+          >
+            BOOK NOW
+          </button>
+        </div>
       </nav>
 
       <!-- About Section -->
       <section
-        class="flex justify-center bg-white absolute right-0 h-full w-[50%] z-[1]"
+        class="flex flex-col justify-start px-6 md:justify-center bg-white absolute right-0 h-full w-full md:w-[50%] z-[1]"
       >
         <h2
           data-aos="fade-up"
@@ -64,6 +72,13 @@
         >
           About Us
         </h2>
+
+        <p class="text-black">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tenetur
+          temporibus doloremque placeat, magni quae sint ab delectus facere
+          aperiam possimus expedita similique. Similique, aliquam corporis hic
+          esse nam officiis!
+        </p>
       </section>
 
       <div
@@ -85,7 +100,9 @@
     </header>
 
     <!-- Section -->
-    <section class="flex flex-col px-10 py-10 gap-5">
+    <section
+      class="flex flex-col px-4 py-4 mt-96 md:mt-0 md:px-10 md:py-10 gap-5 z-50"
+    >
       <p data-aos="fade-left" class="ibm-font text-lg md:xl">
         Welcome to Bliss Regency, your haven of luxury and comfort in the heart
         of Palakkad. We pride ourselves on providing exceptional hospitality and
@@ -129,7 +146,7 @@
 
     <!-- Footer Section -->
     <footer
-      class="bg-[#F9F7F5] flex flex-col md:flex-row justify-between mt-7 md:mt-24 px-7 py-6 pr-14 items-center md:items-start"
+      class="bg-[#F9F7F5] flex flex-col md:flex-row justify-between mt-7 md:mt-24 px-3 md:px-7 py-6 pr-4 md:pr-14 items-center md:items-start"
     >
       <img
         class="w-24 md:w-[10%]"
@@ -148,11 +165,11 @@
       <div class="flex flex-col w-full md:w-[10%]">
         <p class="old-font text-lg mr-4 md:mr-0">Quick Links</p>
         <div
-          class="flex flex-row md:flex-col w-[80%] justify-between md:justify-normal items-center md:items-start md:w-auto md:mt-3 mt-0 text-[#474341]"
+          class="flex flex-row md:flex-col w-[100%] justify-between md:justify-normal items-center md:items-start md:w-auto md:mt-3 mt-0 text-[#474341]"
         >
           <a href="">Bookings</a>
-          <a href="">Rooms</a>
-          <a href="">Services</a>
+          <a href="rooms.html">Rooms</a>
+          <a href="services.html">Services</a>
           <a href="">Contact</a>
         </div>
       </div>
@@ -174,9 +191,9 @@
 
     <!-- Copyright Section -->
     <section
-      class="bg-[#F9F7F5] py-5 flex flex-col md:flex-row items-center gap-3 md:gap-0 md:items-start justify-around"
+      class="bg-[#F9F7F5] py-5 flex flex-col md:flex-row items-center gap-3 md:gap-0 md:items-start justify-around px-3 md:px-0"
     >
-      <p class="text-[#474341]">
+      <p class="text-[#474341] text-center md:text-left">
         © 2021 Copyright Bliss regency. All rights reserved
       </p>
       <div class="flex">

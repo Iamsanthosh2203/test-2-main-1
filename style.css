@@ -170,3 +170,12 @@ button .fas {
 .dot.active {
   background: #272727;
 }
+
+/* Background Image for mobile */
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+  header {
+    background-size: cover;
+    background-position: center;
+  }
+}
