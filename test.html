@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Executive Twin Bed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;500;700&family=IBM+Plex+Sans:wght@300;400;500&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Ubuntu:wght@300;500;700&family=Ysabeau+Infant:ital,wght@0,100;0,700;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="royal-suite.css" />
+    <link rel="stylesheet" href="test.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <div class="slider bg-[#F9F7F5]">
+      <div class="slide">
+        <!-- Comments Section -->
+        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
+            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
+            similique asperiores itaque.
+          </p>
+          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+        </div>
+      </div>
+      <div class="slide">
+        <!-- Comments Section -->
+        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
+            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
+            similique asperiores itaque.
+          </p>
+          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+        </div>
+      </div>
+      <div class="slide">
+        <!-- Comments Section -->
+        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
+            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
+            similique asperiores itaque.
+          </p>
+          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+        </div>
+      </div>
+      <div class="slide">
+        <!-- Comments Section -->
+        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
+            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
+            similique asperiores itaque.
+          </p>
+          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+        </div>
+      </div>
+
+      <button class="btn-slide prev">
+        <i class="fas fa-3x fa-chevron-circle-left"></i>
+      </button>
+      <button class="btn-slide next">
+        <i class="fas fa-3x fa-chevron-circle-right"></i>
+      </button>
+    </div>
+    <div class="dots-container bg-[#F9F7F5]">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+    </div>
+    <script>
+      function Slider() {
+        const carouselSlides = document.querySelectorAll(".slide");
+        const btnPrev = document.querySelector(".prev");
+        const btnNext = document.querySelector(".next");
+        const dotsSlide = document.querySelector(".dots-container");
+        let currentSlide = 0;
+
+        const activeDot = function (slide) {
+          document
+            .querySelectorAll(".dot")
+            .forEach((dot) => dot.classList.remove("active"));
+          document
+            .querySelector(`.dot[data-slide="${slide}"]`)
+            .classList.add("active");
+        };
+        activeDot(currentSlide);
+
+        const changeSlide = function (slides) {
+          carouselSlides.forEach(
+            (slide, index) =>
+              (slide.style.transform = `translateX(${100 * (index - slides)}%)`)
+          );
+        };
+        changeSlide(currentSlide);
+
+        btnNext.addEventListener("click", function () {
+          currentSlide++;
+          if (carouselSlides.length - 1 < currentSlide) {
+            currentSlide = 0;
+          }
+          changeSlide(currentSlide);
+          activeDot(currentSlide);
+        });
+        btnPrev.addEventListener("click", function () {
+          currentSlide--;
+          if (0 >= currentSlide) {
+            currentSlide = 0;
+          }
+          changeSlide(currentSlide);
+          activeDot(currentSlide);
+        });
+
+        dotsSlide.addEventListener("click", function (e) {
+          if (e.target.classList.contains("dot")) {
+            const slide = e.target.dataset.slide;
+            changeSlide(slide);
+            activeDot(slide);
+          }
+        });
+      }
+      Slider();
+      AOS.init({
+        duration: 1200,
+      });
+    </script>
+  </body>
+</html>

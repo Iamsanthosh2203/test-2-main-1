@@ -90,9 +90,15 @@
             <p id="arrivalDate" data-aos="fade-down" class="text-7xl old-font">
               24
             </p>
-            <span id="arrivalMonth" class="text-lg ibm-font">Jan</span>
+            <span
+              id="arrivalMonth"
+              data-aos="fade-right"
+              class="text-lg ibm-font"
+              >Jan</span
+            >
           </div>
           <input
+            data-aos="fade-left"
             id="arrival"
             type="datetime"
             placeholder="Click For Arrival"
@@ -116,9 +122,15 @@
             >
               24
             </p>
-            <span id="departureMonth" class="text-lg ibm-font">Jan</span>
+            <span
+              id="departureMonth"
+              data-aos="fade-right"
+              class="text-lg ibm-font"
+              >Jan</span
+            >
           </div>
           <input
+            data-aos="fade-left"
             id="departure"
             type="departure"
             placeholder="Click For Departure"
@@ -477,25 +489,69 @@
     </section>
 
     <!-- Comments Section -->
-    <section
-      class="bg-fixed mt-20 py-16 flex flex-col items-center justify-center text-center px-[15rem] ibm-font text-[#474341] bg-[#F9F7F5]"
-    >
-      <p data-aos="fade-right">
-        This is for Bliss regency demo. This is for Bliss regency demo. This is
-        for Bliss regency demo This is for Bliss regency demoThis is for Bliss
-        regency demoThis is for Bliss regency demoThis is for Bliss regency
-        demoThis is for Bliss regency demoThis is for Bliss regency demoThis is
-        for Bliss regency demo
-      </p>
-
-      <p data-aos="fade-left" class="font-semibold my-6">- JASON HOOK, USA</p>
-
-      <div class="flex gap-5">
-        <img src="assests/Ellipse 6.png" alt="" srcset="" />
-        <img src="assests/Ellipse 5.png" alt="" srcset="" />
-        <img src="assests/Ellipse 5.png" alt="" srcset="" />
+    <section data-aos="fade-down" class="slider bg-[#F9F7F5] mt-10">
+      <div class="slide">
+        <!-- Comments Section -->
+        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
+            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
+            similique asperiores itaque.
+          </p>
+          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+        </div>
       </div>
+      <div class="slide">
+        <!-- Comments Section -->
+        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
+            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
+            similique asperiores itaque.
+          </p>
+          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+        </div>
+      </div>
+      <div class="slide">
+        <!-- Comments Section -->
+        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
+            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
+            similique asperiores itaque.
+          </p>
+          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+        </div>
+      </div>
+      <div class="slide">
+        <!-- Comments Section -->
+        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
+            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
+            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
+            similique asperiores itaque.
+          </p>
+          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+        </div>
+      </div>
+
+      <button class="btn-slide prev">
+        <i class="fas fa-3x fa-chevron-circle-left"></i>
+      </button>
+      <button class="btn-slide next">
+        <i class="fas fa-3x fa-chevron-circle-right"></i>
+      </button>
     </section>
+    <div data-aos="fade-up" class="dots-container bg-[#F9F7F5] mb-10">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+    </div>
 
     <!-- Image Container -->
     <div class="h-[500px] image-container mb-14 bg-fixed"></div>
@@ -567,7 +623,7 @@
             name=""
             id=""
             placeholder="Write Your Message"
-            class="placeholder:text-black old-font border-b"
+            class="placeholder:text-black old-font border-b p-4"
           />
           <input
             data-aos="fade-up"
@@ -575,7 +631,7 @@
             name=""
             id=""
             placeholder="Write Your Full Name"
-            class="placeholder:text-black old-font border-b"
+            class="placeholder:text-black old-font border-b p-4"
           />
           <input
             data-aos="fade-up"
@@ -583,7 +639,7 @@
             name=""
             id=""
             placeholder="Write Your Email Address"
-            class="placeholder:text-black old-font border-b"
+            class="placeholder:text-black old-font border-b p-4"
           />
         </form>
         <div>
