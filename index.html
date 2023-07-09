@@ -27,6 +27,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
+    <link rel="stylesheet" href="custom.css" />
   </head>
   <body>
     <!-- Header Section -->
@@ -38,7 +39,7 @@
       >
         <img style="width: 7%" src="assests/logo blis 1.png" alt="" srcset="" />
         <div class="flex gap-6 links">
-          <a href="index.html">HOME</a>
+          <a href="index.html" class="underline underline-offset-8">HOME</a>
           <a href="about.html">ABOUT US</a>
           <a href="rooms.html">ROOMS</a>
           <a href="services.html">SERVICES</a>
@@ -251,61 +252,75 @@
       </div>
 
       <!-- Second Section -->
-      <div class="flex flex-col gap-4">
+      <div class="block gap-4">
         <h2 data-aos="fade-right" class="old-font text-4xl">
           Explore Our Rooms
         </h2>
 
-        <div class="flex gap-5 justify-center">
-          <!-- Image -->
-          <div class="flex flex-col gap-2">
-            <div>
-              <img
-                data-aos="fade-left"
-                src="assests/WhatsApp Image 2023-06-28 at 09.47 6.png"
-                width="300"
-                alt=""
-                srcset=""
-              />
+        <div class="custom-slider">
+          <div class="custom-slide">
+            <!-- Comments Section -->
+            <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+              <div class="flex flex-col gap-5">
+                <div class="h-80 w-[30rem]">
+                  <img src="royal-suite/1.JPG" alt="" srcset="" />
+                </div>
+                <p class="old-font tracking-widest">Royal Suite</p>
+              </div>
             </div>
-            <p data-aos="fade-left" class="old-font text-lg">Classic Rooms</p>
+          </div>
+          <div class="custom-slide">
+            <!-- Comments Section -->
+            <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+              <div class="flex flex-col gap-5">
+                <div class="h-80 w-[30rem]">
+                  <img src="dulex-room/1.JPG" alt="" srcset="" />
+                </div>
+                <p class="old-font tracking-widest">Dulex Rooms</p>
+              </div>
+            </div>
+          </div>
+          <div class="custom-slide">
+            <!-- Comments Section -->
+            <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+              <div class="flex flex-col gap-5">
+                <div class="h-80 w-[30rem]">
+                  <img src="executive-room/1.JPG" alt="" srcset="" />
+                </div>
+                <p class="old-font tracking-widest">Executive Rooms</p>
+              </div>
+            </div>
+          </div>
+          <div class="custom-slide">
+            <!-- Comments Section -->
+            <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+              <div class="flex flex-col gap-5">
+                <div class="h-80 w-[30rem]">
+                  <img src="executive-twinbed/1.JPG" alt="" srcset="" />
+                </div>
+                <p class="old-font tracking-widest">Executive Twinbed</p>
+              </div>
+            </div>
           </div>
 
-          <!-- Image -->
-          <div class="flex flex-col gap-2">
-            <div>
-              <img
-                data-aos="fade-left"
-                src="assests/WhatsApp Image 2023-06-28 at 09.47 8.png"
-                width="300"
-                alt=""
-                srcset=""
-              />
-            </div>
-            <p data-aos="fade-left" class="old-font text-lg">
-              Grand Dulex Rooms
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <div>
-              <img
-                data-aos="fade-left"
-                src="assests/WhatsApp Image 2023-06-28 at 09.47 8.png"
-                width="300"
-                alt=""
-                srcset=""
-              />
-            </div>
-            <p data-aos="fade-left" class="old-font text-lg">
-              Grand Dulex Rooms
-            </p>
-          </div>
+          <button class="custom-btn custom-btn-slide custom-prev">
+            <i class="fas fa-3x fa-chevron-circle-left"></i>
+          </button>
+          <button class="custom-btn custom-btn-slide custom-next">
+            <i class="fas fa-3x fa-chevron-circle-right"></i>
+          </button>
+        </div>
+        <div class="custom-dots-container bg-[#F9F7F5]">
+          <span class="custom-dot active" data-slide="0"></span>
+          <span class="custom-dot" data-slide="1"></span>
+          <span class="custom-dot" data-slide="2"></span>
+          <span class="custom-dot" data-slide="3"></span>
         </div>
       </div>
 
       <div class="flex justify-center mt-4">
         <button
+          onclick="window.location.href='rooms.html'"
           data-aos="fade-right"
           class="p-6 px-[5rem] ibm-font rounded-full border border-[#D2D2D2] text-[#27221F] hover:bg-[#27221F] duration-300 hover:text-white"
         >
@@ -321,16 +336,16 @@
       <h3 data-aos="fade-up" class="old-font text-6xl">
         Welcome To Bliss Regency
       </h3>
-      <p data-aos="fade-up" class="text-center ibm-font">
-        This is for Bliss regency demo. This is for Bliss regency demo. This is
-        for Bliss regency demo This is for Bliss regency demoThis is for Bliss
-        regency demoThis is for Bliss regency demoThis is for Bliss regency
-        demoThis is for Bliss regency demoThis is for Bliss regency demoThis is
-        for Bliss regency demo
+      <p data-aos="fade-up" class="text-center ibm-font text-xl">
+        Your haven of luxury and comfort in the heart of Palakkad. We pride
+        ourselves on providing exceptional hospitality and a wide range of
+        accommodation options to suit every Business person’s and a traveler’s
+        needs.
       </p>
       <button
+        onclick="window.location.href='about.html'"
         data-aos="fade-up"
-        class="p-6 px-[5rem] ibm-font rounded-full border border-[#D2D2D2] text-white hover:bg-[#27221F] duration-300"
+        class="p-6 px-[5rem] ibm-font rounded-full border border-[#D2D2D2] text-white hover:bg-white hover:text-black duration-300"
       >
         About Us
       </button>
@@ -353,11 +368,13 @@
           What Facilites We Offer
         </h3>
         <p data-aos="fade-left" class="ibm-font">
-          This is for Bliss regency demo. This is for Bliss regency demo. This
-          is for Bliss regency demo This is for Bliss regency demoThis is for
-          Bliss regency demoThis is for Bliss regency demoThis is for Bliss
-          regency demoThis is for Bliss regency demoThis is for Bliss regency
-          demoThis is for Bliss regency demo
+          Bliss Regency in Palakkad is the ultimate level of luxury. In
+          our rooms, you'll find air conditioning, a kettle, and a private couch
+          area. Keep yourself entertained with a flat-screen TV and connected
+          with complimentary WiFi. Enjoy a comfortable night's sleep on our
+          king-size beds and take advantage of amenities like as a refrigerator,
+          laundry services, and other necessities. Bliss Regency in Palakkad
+          offers a pleasant experience where elegance meets convenience.
         </p>
 
         <div
@@ -406,8 +423,9 @@
 
         <div>
           <button
+            onclick="window.location.href='services.html'"
             data-aos="fade-up"
-            class="p-4 mt-6 px-[5rem] ibm-font rounded-full border border-[#D2D2D2] text-[#27221F] hover:bg-[#27221F] duration-300 hover:text-white"
+            class="mt-4 p-4 px-[5rem] ibm-font rounded-full border bg-[#27221F] border-[#27221F] text-white hover:bg-white duration-300 hover:text-[#27221F]"
           >
             View All Offers
           </button>
@@ -754,5 +772,6 @@
       flatpickr("#departure", {});
     </script>
     <script src="script.js"></script>
+    <script src="custom.js"></script>
   </body>
 </html>

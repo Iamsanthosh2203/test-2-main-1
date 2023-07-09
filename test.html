@@ -24,121 +24,123 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
-    <div class="slider bg-[#F9F7F5]">
-      <div class="slide">
+    <div class="custom-slider bg-[#F9F7F5]">
+      <div class="custom-slide">
         <!-- Comments Section -->
         <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
-            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
-            similique asperiores itaque.
-          </p>
-          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+          <div class="flex flex-col gap-5">
+            <div class="h-80 w-[30rem]">
+              <img src="royal-suite/1.JPG" alt="" srcset="" />
+            </div>
+            <p class="font-bold tracking-widest">Royal Suite</p>
+          </div>
         </div>
       </div>
-      <div class="slide">
+      <div class="custom-slide">
         <!-- Comments Section -->
         <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
-            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
-            similique asperiores itaque.
-          </p>
-          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+          <div class="flex flex-col gap-5">
+            <div class="h-80 w-[30rem]">
+              <img src="dulex-room/1.JPG" alt="" srcset="" />
+            </div>
+            <p class="font-bold tracking-widest">Dulex Rooms</p>
+          </div>
         </div>
       </div>
-      <div class="slide">
+      <div class="custom-slide">
         <!-- Comments Section -->
         <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
-            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
-            similique asperiores itaque.
-          </p>
-          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+          <div class="flex flex-col gap-5">
+            <div class="h-80 w-[30rem]">
+              <img src="executive-room/1.JPG" alt="" srcset="" />
+            </div>
+            <p class="font-bold tracking-widest">Executive Rooms</p>
+          </div>
         </div>
       </div>
-      <div class="slide">
+      <div class="custom-slide">
         <!-- Comments Section -->
         <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
-            porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
-            officiis deserunt nobis, cumque ipsum. Voluptate neque quas nobis
-            similique asperiores itaque.
-          </p>
-          <p class="font-bold tracking-widest">- JASON HOOK, USA</p>
+          <div class="flex flex-col gap-5">
+            <div class="h-80 w-[30rem]">
+              <img src="executive-twinbed/1.JPG" alt="" srcset="" />
+            </div>
+            <p class="font-bold tracking-widest">Executive Twinbed</p>
+          </div>
         </div>
       </div>
 
-      <button class="btn-slide prev">
+      <button class="custom-btn custom-btn-slide custom-prev">
         <i class="fas fa-3x fa-chevron-circle-left"></i>
       </button>
-      <button class="btn-slide next">
+      <button class="custom-btn custom-btn-slide custom-next">
         <i class="fas fa-3x fa-chevron-circle-right"></i>
       </button>
     </div>
-    <div class="dots-container bg-[#F9F7F5]">
-      <span class="dot active" data-slide="0"></span>
-      <span class="dot" data-slide="1"></span>
-      <span class="dot" data-slide="2"></span>
-      <span class="dot" data-slide="3"></span>
+    <div class="custom-dots-container bg-[#F9F7F5]">
+      <span class="custom-dot active" data-slide="0"></span>
+      <span class="custom-dot" data-slide="1"></span>
+      <span class="custom-dot" data-slide="2"></span>
+      <span class="custom-dot" data-slide="3"></span>
     </div>
+
     <script>
-      function Slider() {
-        const carouselSlides = document.querySelectorAll(".slide");
-        const btnPrev = document.querySelector(".prev");
-        const btnNext = document.querySelector(".next");
-        const dotsSlide = document.querySelector(".dots-container");
+      function CustomSlider() {
+        const customSlides = document.querySelectorAll(".custom-slide");
+        const customPrevBtn = document.querySelector(".custom-prev");
+        const customNextBtn = document.querySelector(".custom-next");
+        const customDotsContainer = document.querySelector(
+          ".custom-dots-container"
+        );
         let currentSlide = 0;
 
-        const activeDot = function (slide) {
+        const activateDot = function (slide) {
           document
-            .querySelectorAll(".dot")
+            .querySelectorAll(".custom-dot")
             .forEach((dot) => dot.classList.remove("active"));
           document
-            .querySelector(`.dot[data-slide="${slide}"]`)
+            .querySelector(`.custom-dot[data-slide="${slide}"]`)
             .classList.add("active");
         };
-        activeDot(currentSlide);
+        activateDot(currentSlide);
 
         const changeSlide = function (slides) {
-          carouselSlides.forEach(
+          customSlides.forEach(
             (slide, index) =>
               (slide.style.transform = `translateX(${100 * (index - slides)}%)`)
           );
         };
         changeSlide(currentSlide);
 
-        btnNext.addEventListener("click", function () {
+        customNextBtn.addEventListener("click", function () {
           currentSlide++;
-          if (carouselSlides.length - 1 < currentSlide) {
+          if (customSlides.length - 1 < currentSlide) {
             currentSlide = 0;
           }
           changeSlide(currentSlide);
-          activeDot(currentSlide);
-        });
-        btnPrev.addEventListener("click", function () {
-          currentSlide--;
-          if (0 >= currentSlide) {
-            currentSlide = 0;
-          }
-          changeSlide(currentSlide);
-          activeDot(currentSlide);
+          activateDot(currentSlide);
         });
 
-        dotsSlide.addEventListener("click", function (e) {
-          if (e.target.classList.contains("dot")) {
+        customPrevBtn.addEventListener("click", function () {
+          currentSlide--;
+          if (currentSlide < 0) {
+            currentSlide = customSlides.length - 1;
+          }
+          changeSlide(currentSlide);
+          activateDot(currentSlide);
+        });
+
+        customDotsContainer.addEventListener("click", function (e) {
+          if (e.target.classList.contains("custom-dot")) {
             const slide = e.target.dataset.slide;
             changeSlide(slide);
-            activeDot(slide);
+            activateDot(slide);
           }
         });
       }
-      Slider();
+
+      CustomSlider();
+
       AOS.init({
         duration: 1200,
       });
