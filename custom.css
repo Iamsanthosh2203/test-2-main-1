@@ -70,3 +70,34 @@
 .custom-dot.active {
   background: #272727;
 }
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 767px) {
+  .custom-slider {
+    height: 20rem; /* Adjust the height for mobile devices */
+  }
+
+  .custom-slide {
+    width: 90%; /* Adjust the width for mobile devices */
+    height: 20rem; /* Adjust the height for mobile devices */
+  }
+
+  .custom-btn-slide {
+    height: 4rem; /* Adjust the height for mobile devices */
+    width: 4rem; /* Adjust the width for mobile devices */
+  }
+
+  .custom-prev {
+    left: 1.5rem; /* Adjust the left position for mobile devices */
+  }
+
+  .custom-next {
+    right: 2rem; /* Adjust the right position for mobile devices */
+  }
+
+  .custom-dot {
+    width: 8px; /* Adjust the width for mobile devices */
+    height: 8px; /* Adjust the height for mobile devices */
+    margin: 10px 4px; /* Adjust the margin for mobile devices */
+  }
+}
