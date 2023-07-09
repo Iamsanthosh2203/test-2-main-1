@@ -31,33 +31,47 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header class="h-screen text-white bg-fixed w-full">
+    <header class="max-h-screen text-white bg-fixed w-full">
       <!-- Navigation Section -->
       <div id="blurryscroll" aria-hidden="true"></div>
       <nav
-        class="pt-3 px-5 flex justify-between items-center pb-3 border-b border-white"
+        class="pt-3 px-5 flex justify-between items-center pb-3 border-b border-white relative z-10 bg-fixed"
       >
-        <img style="width: 7%" src="assests/logo blis 1.png" alt="" srcset="" />
-        <div class="flex gap-6 links">
-          <a href="index.html" class="underline underline-offset-8">HOME</a>
-          <a href="about.html">ABOUT US</a>
+        <img
+          class="w-[10%] md:w-[7%]"
+          src="assests/logo blis 1.png"
+          alt=""
+          srcset=""
+        />
+        <div class="gap-6 links hidden md:flex">
+          <a href="index.html">HOME</a>
+          <a href="about.html" class="underline underline-offset-8">ABOUT US</a>
           <a href="rooms.html">ROOMS</a>
           <a href="services.html">SERVICES</a>
           <a href="#">RESTAURANT</a>
           <a href="#">CONTACT</a>
         </div>
-        <button class="bg-transparent py-3 px-5 border rounded-full">
+        <button
+          class="bg-transparent py-3 px-5 border rounded-full hidden md:block"
+        >
           BOOK NOW
+        </button>
+
+        <button id="menuBtn" class="text-xl block md:hidden">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </nav>
 
       <!-- Header Section -->
-      <section id="content" class="pt-[9.5rem] pl-[10rem] pr-[38rem]">
+      <section
+        id="content"
+        class="pt-[4rem] pl-8 md:pl-[10rem] pr-8 md:pr-[38rem]"
+      >
         <div class="flex flex-col gap-5">
           <p data-aos="fade-right" class="tracking-widest font-normal">
             BEST HOTEL WITH COZY ROOMS
           </p>
-          <h1 data-aos="zoom-out-down" class="heading text-6xl">
+          <h1 data-aos="zoom-out-down" class="heading text-4xl md:text-6xl">
             Just Exprience A New <br />Level Of Luxury.
           </h1>
           <p data-aos="fade-right" class="font-light">
@@ -75,11 +89,32 @@
           Explore Rooms
         </button>
       </section>
+
+      <div
+        id="menu"
+        class="h-full w-full bg-black text-white absolute top-0 z-50 hidden flex-col justify-center items-center px-14 gap-4 md:hidden"
+      >
+        <button id="closeBtn" class="flex w-full">
+          <i
+            class="fa-solid fa-xmark self-end absolute top-[20px] right-[20px] text-4xl"
+          ></i>
+        </button>
+
+        <a class="text-4xl old-font" href="index.html">Home</a>
+        <a class="text-4xl old-font" href="about.html">About</a>
+        <a class="text-4xl old-font" href="rooms.html">Rooms</a>
+        <a class="text-4xl old-font" href="">Resturant</a>
+        <a class="text-4xl old-font" href="">Contact</a>
+      </div>
     </header>
     <!-- About Section -->
-    <section class="min-h-screen flex px-[9rem] py-[3rem] flex-col bg-fixed">
+    <section
+      class="min-h-screen flex px-3 py-3 md:px-[9rem] md:py-[3rem] flex-col bg-fixed"
+    >
       <!-- First Section -->
-      <div class="flex gap-[3rem] mb-[3.5rem]">
+      <div
+        class="flex flex-wrap md:flex-nowrap gap-[3rem] pl-6 md:pl-0 mb-[3.5rem]"
+      >
         <div class="flex flex-col gap-3">
           <p
             data-aos="fade-right"
@@ -260,9 +295,11 @@
         <div class="custom-slider">
           <div class="custom-slide">
             <!-- Comments Section -->
-            <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+            <div
+              class="flex flex-col px-8 md:px-32 gap-6 ibm-font text-center text-xl"
+            >
               <div class="flex flex-col gap-5">
-                <div class="h-80 w-[30rem]">
+                <div class="md:h-80 md:w-[30rem] h-[12rem] w-[19rem]">
                   <img src="royal-suite/1.JPG" alt="" srcset="" />
                 </div>
                 <p class="old-font tracking-widest">Royal Suite</p>
@@ -273,7 +310,7 @@
             <!-- Comments Section -->
             <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
               <div class="flex flex-col gap-5">
-                <div class="h-80 w-[30rem]">
+                <div class="md:h-80 md:w-[30rem] h-[12rem] w-[19rem]">
                   <img src="dulex-room/1.JPG" alt="" srcset="" />
                 </div>
                 <p class="old-font tracking-widest">Dulex Rooms</p>
@@ -284,7 +321,7 @@
             <!-- Comments Section -->
             <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
               <div class="flex flex-col gap-5">
-                <div class="h-80 w-[30rem]">
+                <div class="md:h-80 md:w-[30rem] h-[12rem] w-[19rem]">
                   <img src="executive-room/1.JPG" alt="" srcset="" />
                 </div>
                 <p class="old-font tracking-widest">Executive Rooms</p>
@@ -295,7 +332,7 @@
             <!-- Comments Section -->
             <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
               <div class="flex flex-col gap-5">
-                <div class="h-80 w-[30rem]">
+                <div class="md:h-80 md:w-[30rem] h-[12rem] w-[19rem]">
                   <img src="executive-twinbed/1.JPG" alt="" srcset="" />
                 </div>
                 <p class="old-font tracking-widest">Executive Twinbed</p>
@@ -331,7 +368,7 @@
 
     <!-- Welcome Page -->
     <section
-      class="welcome flex flex-col justify-center items-center py-44 h-screen text-white gap-5 px-44 bg-fixed"
+      class="welcome flex flex-col justify-center items-center px-10 py-10 md:py-44 h-screen text-white gap-5 md:px-44 bg-fixed"
     >
       <h3 data-aos="fade-up" class="old-font text-6xl">
         Welcome To Bliss Regency
@@ -352,8 +389,10 @@
     </section>
 
     <!-- Offer Page -->
-    <section class="flex justify-between pr-6 mb-16 bg-[#F9F7F5]">
-      <div class="basis-[30%]">
+    <section
+      class="flex justify-between pr-6 mb-16 py-8 md:py-0 px-6 md:px-0 bg-[#F9F7F5]"
+    >
+      <div class="basis-[30%] hidden md:block">
         <img
           data-aos="fade-right"
           class="w-full h-full"
@@ -363,7 +402,9 @@
         />
       </div>
 
-      <div class="flex flex-col gap-5 justify-center basis-[60%]">
+      <div
+        class="flex flex-col gap-5 justify-center basis-[100%] md:basis-[60%]"
+      >
         <h3 data-aos="fade-left" class="old-font text-4xl">
           What Facilites We Offer
         </h3>
@@ -379,7 +420,7 @@
 
         <div
           data-aos="fade-up-left"
-          class="flex flex-wrap justify-between pr-[22rem]"
+          class="flex flex-wrap justify-between pr-0 md:pr-[22rem]"
         >
           <div class="flex items-center gap-3 basis-[30%]">
             <img src="assests/002-plant.png" class="w-10" alt="" />
@@ -399,7 +440,7 @@
 
         <div
           data-aos="fade-up-left"
-          class="flex flex-wrap justify-between pr-[22rem]"
+          class="flex flex-wrap justify-between pr-0 md:pr-[22rem]"
         >
           <div class="flex items-center gap-3 basis-[30%]">
             <img
@@ -434,7 +475,7 @@
     </section>
 
     <!-- Achievements Section -->
-    <section class="flex flex-col px-[15rem] gap-5 bg-fixed">
+    <section class="flex flex-col px-4 md:px-[15rem] gap-5 bg-fixed">
       <div>
         <h4 data-aos="zoom-in-up" class="text-4xl old-font">
           Our Achievements
@@ -510,7 +551,9 @@
     <section data-aos="fade-down" class="slider bg-[#F9F7F5] mt-10">
       <div class="slide">
         <!-- Comments Section -->
-        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+        <div
+          class="flex flex-col px-8 md:px-32 gap-6 ibm-font text-center text-xl"
+        >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
             porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
@@ -522,7 +565,9 @@
       </div>
       <div class="slide">
         <!-- Comments Section -->
-        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+        <div
+          class="flex flex-col px-8 md:px-32 gap-6 ibm-font text-center text-xl"
+        >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
             porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
@@ -534,7 +579,9 @@
       </div>
       <div class="slide">
         <!-- Comments Section -->
-        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+        <div
+          class="flex flex-col px-8 md:px-32 gap-6 ibm-font text-center text-xl"
+        >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
             porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
@@ -546,7 +593,9 @@
       </div>
       <div class="slide">
         <!-- Comments Section -->
-        <div class="flex flex-col px-32 gap-6 ibm-font text-center text-xl">
+        <div
+          class="flex flex-col px-8 md:px-32 gap-6 ibm-font text-center text-xl"
+        >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore,
             porro. Nobis eaque consequuntur autem atque. Quaerat repellat maxime
@@ -575,8 +624,8 @@
     <div class="h-[500px] image-container mb-14 bg-fixed"></div>
 
     <!-- Section 1 -->
-    <section class="px-[6rem] pt-16 flex justify-between">
-      <div class="basis-[45%]">
+    <section class="px-4 md:px-[6rem] pt-8 md:pt-16 flex justify-between">
+      <div class="basis-[45%] hidden md:block">
         <img
           data-aos="fade-left"
           src="assests/WhatsApp Image 2023-06-28 at 09.47 5.png"
@@ -586,7 +635,7 @@
         />
       </div>
 
-      <div class="basis-[45%] flex flex-col items-center">
+      <div class="basis-[100%] md:basis-[45%] flex flex-col items-center">
         <div
           data-aos="fade-right"
           class="w-full border h-[.5px] border-[#000000] my-2"
@@ -625,8 +674,10 @@
     </section>
 
     <!-- Get Intouch Section -->
-    <section class="my-10 px-6 flex">
-      <div class="basis-[60%] px-28 pr-36 flex flex-col justify-center">
+    <section class="my-10 px-2 md:px-6 flex">
+      <div
+        class="basis-[100%] md:basis-[60%] px-8 md:px-28 pr-0 md:pr-36 flex flex-col justify-center"
+      >
         <h5 data-aos="fade-right" class="text-4xl old-font">Get In Touch</h5>
         <p data-aos="fade-right" class="ibm-font">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore ipsum
@@ -663,20 +714,22 @@
         <div>
           <button
             data-aos="fade-up"
-            class="mt-4 p-4 px-[5rem] ibm-font rounded-full border bg-[#27221F] border-[#27221F] text-white hover:bg-white duration-300 hover:text-[#27221F]"
+            class="w-[100%] md:w-auto mt-4 p-4 px-[5rem] ibm-font rounded-full border bg-[#27221F] border-[#27221F] text-white hover:bg-white duration-300 hover:text-[#27221F]"
           >
             Submit
           </button>
         </div>
       </div>
 
-      <div class="basis-[30%]">
+      <div class="basis-[30%] hidden md:block">
         <img src="assests/ALIS5792 1.png" alt="" class="my-5" />
       </div>
     </section>
 
     <!-- Newsletter Section -->
-    <section class="flex justify-between mt-10 px-24 items-center">
+    <section
+      class="flex flex-col md:flex-row justify-between mt-10 px-8 md:px-24 items-center"
+    >
       <div style="width: 100%" class="basis-[40%]">
         <iframe
           width="100%"
@@ -722,17 +775,28 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-[#F9F7F5] flex justify-between mt-24 px-7 py-6 pr-14">
-      <img src="assests/logo blis 1.png" alt="" srcset="" />
+    <footer
+      class="bg-[#F9F7F5] flex flex-col md:flex-row justify-between mt-7 md:mt-24 px-7 py-6 pr-14 items-center md:items-start"
+    >
+      <img
+        class="w-24 md:w-[10%]"
+        src="assests/logo blis 1.png"
+        alt=""
+        srcset=""
+      />
 
-      <div class="flex flex-col">
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">About Us</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
 
-      <div>
-        <p class="old-font text-lg">Quick Links</p>
-        <div class="flex flex-col mt-3 text-[#474341]">
+      <div class="flex flex-col w-full md:w-[10%]">
+        <p class="old-font text-lg mr-4 md:mr-0">Quick Links</p>
+        <div
+          class="flex flex-row md:flex-col w-[80%] justify-between md:justify-normal items-center md:items-start md:w-auto md:mt-3 mt-0 text-[#474341]"
+        >
           <a href="">Bookings</a>
           <a href="">Rooms</a>
           <a href="">Services</a>
@@ -740,19 +804,25 @@
         </div>
       </div>
 
-      <div>
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">Contact</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
 
-      <div>
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">Get Social</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
     </footer>
 
     <!-- Copyright Section -->
-    <section class="bg-[#F9F7F5] py-5 flex justify-around">
+    <section
+      class="bg-[#F9F7F5] py-5 flex flex-col md:flex-row items-center gap-3 md:gap-0 md:items-start justify-around"
+    >
       <p class="text-[#474341]">
         © 2021 Copyright Bliss regency. All rights reserved
       </p>

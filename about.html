@@ -29,8 +29,13 @@
       <nav
         class="pt-3 px-5 flex justify-between items-center pb-3 border-b border-white relative z-10 bg-fixed"
       >
-        <img style="width: 7%" src="assests/logo blis 1.png" alt="" srcset="" />
-        <div class="flex gap-6 links">
+        <img
+          class="w-[10%] md:w-[7%]"
+          src="assests/logo blis 1.png"
+          alt=""
+          srcset=""
+        />
+        <div class="gap-6 links hidden md:flex">
           <a href="index.html">HOME</a>
           <a href="about.html" class="underline underline-offset-8">ABOUT US</a>
           <a href="rooms.html">ROOMS</a>
@@ -38,8 +43,14 @@
           <a href="#">RESTAURANT</a>
           <a href="#">CONTACT</a>
         </div>
-        <button class="bg-transparent py-3 px-5 border rounded-full">
+        <button
+          class="bg-transparent py-3 px-5 border rounded-full hidden md:block"
+        >
           BOOK NOW
+        </button>
+
+        <button id="menuBtn" class="text-xl block md:hidden">
+          <i class="fa-solid fa-bars"></i>
         </button>
       </nav>
 
@@ -54,44 +65,61 @@
           About Us
         </h2>
       </section>
+
+      <div
+        id="menu"
+        class="h-full w-full bg-black text-white absolute top-0 z-50 hidden flex-col justify-center items-center px-14 gap-4 md:hidden"
+      >
+        <button id="closeBtn" class="flex w-full">
+          <i
+            class="fa-solid fa-xmark self-end absolute top-[20px] right-[20px] text-4xl"
+          ></i>
+        </button>
+
+        <a class="text-4xl old-font" href="index.html">Home</a>
+        <a class="text-4xl old-font" href="about.html">About</a>
+        <a class="text-4xl old-font" href="rooms.html">Rooms</a>
+        <a class="text-4xl old-font" href="">Resturant</a>
+        <a class="text-4xl old-font" href="">Contact</a>
+      </div>
     </header>
 
     <!-- Section -->
     <section class="flex flex-col px-10 py-10 gap-5">
-      <p data-aos="fade-left" class="ibm-font text-xl">
+      <p data-aos="fade-left" class="ibm-font text-lg md:xl">
         Welcome to Bliss Regency, your haven of luxury and comfort in the heart
         of Palakkad. We pride ourselves on providing exceptional hospitality and
         a wide range of accommodation options to suit every Business person’s
         and a traveler’s needs.
       </p>
-      <p data-aos="fade-right" class="ibm-font text-xl">
+      <p data-aos="fade-right" class="ibm-font text-lg md:xl">
         Indulge in regal elegance in our Royal Suite, offering a spacious
         retreat with a private couch area and a range of amenities including air
         conditioning, a flat-screen TV, and complimentary Wi-Fi. The suite is
         thoughtfully designed with a king-size bed, refrigerator, and access to
         our convenient laundry services.
       </p>
-      <p data-aos="fade-left" class="ibm-font text-xl">
+      <p data-aos="fade-left" class="ibm-font text-lg md:xl">
         For those seeking a touch of serenity, our Deluxe Rooms with balconies
         provide the perfect escape. Enjoy breath taking views of Palakkad's
         natural beauty from the comfort of your private balcony. Each room is
         equipped with air conditioning, a kettle, flat-screen TV, and free
         Wi-Fi, ensuring a delightful stay.
       </p>
-      <p data-aos="fade-right" class="ibm-font text-xl">
+      <p data-aos="fade-right" class="ibm-font text-lg md:xl">
         Our Executive Rooms offer a blend of comfort and sophistication. Relax
         in a plush king-size bed and enjoy amenities like air conditioning, a
         flat-screen TV, and complimentary Wi-Fi. In addition, all Royal Suite
         rooms feature a private couch area, allowing you to unwind in style.
       </p>
-      <p data-aos="fade-left" class="ibm-font text-xl">
+      <p data-aos="fade-left" class="ibm-font text-lg md:xl">
         Traveling with a companion? Our Executive Twin Bed rooms are perfect for
         you. Experience utmost comfort with two cozy beds and a range of
         facilities including air conditioning, a kettle, flat-screen TV, and
         free Wi-Fi. Enjoy the convenience of our basic amenities and make the
         most of your stay in Palakkad.
       </p>
-      <p data-aos="fade-right" class="ibm-font text-xl">
+      <p data-aos="fade-right" class="ibm-font text-lg md:xl">
         At Bliss Regency, we strive to create a memorable experience for our
         guests by combining modern comforts with personalized service. Whether
         you're visiting for business or leisure, our hotel is the perfect choice
@@ -100,17 +128,28 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-[#F9F7F5] flex justify-between mt-24 px-7 py-6 pr-14">
-      <img src="assests/logo blis 1.png" alt="" srcset="" />
+    <footer
+      class="bg-[#F9F7F5] flex flex-col md:flex-row justify-between mt-7 md:mt-24 px-7 py-6 pr-14 items-center md:items-start"
+    >
+      <img
+        class="w-24 md:w-[10%]"
+        src="assests/logo blis 1.png"
+        alt=""
+        srcset=""
+      />
 
-      <div class="flex flex-col">
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">About Us</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
 
-      <div>
-        <p class="old-font text-lg">Quick Links</p>
-        <div class="flex flex-col mt-3 text-[#474341]">
+      <div class="flex flex-col w-full md:w-[10%]">
+        <p class="old-font text-lg mr-4 md:mr-0">Quick Links</p>
+        <div
+          class="flex flex-row md:flex-col w-[80%] justify-between md:justify-normal items-center md:items-start md:w-auto md:mt-3 mt-0 text-[#474341]"
+        >
           <a href="">Bookings</a>
           <a href="">Rooms</a>
           <a href="">Services</a>
@@ -118,19 +157,25 @@
         </div>
       </div>
 
-      <div>
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">Contact</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
 
-      <div>
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">Get Social</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
     </footer>
 
     <!-- Copyright Section -->
-    <section class="bg-[#F9F7F5] py-5 flex justify-around">
+    <section
+      class="bg-[#F9F7F5] py-5 flex flex-col md:flex-row items-center gap-3 md:gap-0 md:items-start justify-around"
+    >
       <p class="text-[#474341]">
         © 2021 Copyright Bliss regency. All rights reserved
       </p>

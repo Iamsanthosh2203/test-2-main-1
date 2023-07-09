@@ -56,3 +56,6 @@ nav {
 .overlock-font {
   font-family: "Overlock SC", cursive;
 }
+.none {
+  display: hidden;
+}
