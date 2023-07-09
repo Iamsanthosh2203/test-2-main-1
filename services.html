@@ -23,14 +23,20 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
-    <header class="h-screen text-white bg-fixed w-full">
+    <!-- Header Section -->
+    <header class="h-auto md:h-screen text-white bg-fixed w-full">
       <!-- Navigation Section -->
       <div id="blurryscroll" aria-hidden="true"></div>
       <nav
-        class="pt-3 px-5 flex justify-between items-center pb-3 border-b border-white"
+        class="pt-3 px-5 flex justify-between items-center pb-3 border-b border-white relative z-10 bg-fixed"
       >
-        <img style="width: 7%" src="assests/logo blis 1.png" alt="" srcset="" />
-        <div class="flex gap-6 links">
+        <img
+          class="w-[20%] md:w-[7%]"
+          src="assests/logo blis 1.png"
+          alt=""
+          srcset=""
+        />
+        <div class="gap-6 links hidden md:flex">
           <a href="index.html">HOME</a>
           <a href="about.html">ABOUT US</a>
           <a href="rooms.html">ROOMS</a>
@@ -40,39 +46,75 @@
           <a href="#">RESTAURANT</a>
           <a href="#">CONTACT</a>
         </div>
-        <button class="bg-transparent py-3 px-5 border rounded-full">
+        <button
+          class="bg-transparent py-3 px-5 border rounded-full hidden md:block"
+        >
           BOOK NOW
         </button>
+
+        <div class="flex flex-row-reverse gap-3 md:hidden">
+          <button id="menuBtn" class="text-xl">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <button
+            class="bg-transparent py-2 px-2 text-sm border rounded-full block md:hidden"
+          >
+            BOOK NOW
+          </button>
+        </div>
       </nav>
 
       <!-- Header Section -->
-      <section id="content" class="pt-[9.5rem] pl-[10rem] pr-[38rem]">
+      <section
+        id="content"
+        class="pt-[4rem] pl-8 md:pl-[10rem] pr-8 md:pr-[38rem]"
+      >
         <div class="flex flex-col gap-5">
-          <h1 data-aos="zoom-out-down" class="heading text-6xl">
-            Explore Our Services
-          </h1>
-          <p data-aos="fade-right" class="font-light">
-            This is for Bliss regency demo. This is for Bliss regency demo. This
-            is for Bliss regency demo This is for Bliss regency demoThis is for
-            Bliss regency demoThis is for Bliss regency demoThis is for Bliss
-            regency demoThis is for Bliss regency demoThis is for Bliss regency
-            demoThis is for Bliss regency demo
+          <p
+            data-aos="fade-right"
+            class="tracking-widest text-center md:text-left font-normal"
+          >
+            BEST HOTEL WITH COZY ROOMS
           </p>
+          <h1
+            data-aos="zoom-out-down"
+            class="heading text-center md:text-left text-4xl md:text-6xl"
+          >
+            Explore Our <br />Facilites
+          </h1>
         </div>
       </section>
+
+      <div
+        id="menu"
+        class="h-full w-full bg-black text-white absolute top-0 z-50 hidden flex-col justify-center items-center px-14 gap-4 md:hidden"
+      >
+        <button id="closeBtn" class="flex w-full">
+          <i
+            class="fa-solid fa-xmark self-end absolute top-[20px] right-[20px] text-4xl"
+          ></i>
+        </button>
+
+        <a class="text-4xl old-font" href="index.html">Home</a>
+        <a class="text-4xl old-font" href="about.html">About</a>
+        <a class="text-4xl old-font" href="rooms.html">Rooms</a>
+        <a class="text-4xl old-font" href="services.html">Services</a>
+        <a class="text-4xl old-font" href="">Resturant</a>
+        <a class="text-4xl old-font" href="">Contact</a>
+      </div>
     </header>
 
     <!-- Section 1 -->
     <section
       id="section"
-      class="relative h-screen px-16 py-10 flex flex-col justify-center items-center flex-wrap gap-6"
+      class="relative h-auto md:h-screen px-6 md:px-16 py-10 flex flex-row md:flex-col justify-center items-center flex-wrap gap-6"
     >
       <div class="flex flex-col gap-2 items-center">
         <h1 class="text-4xl old-font">Services</h1>
         <p class="ibm-font">All the services provided by us</p>
       </div>
 
-      <div class="flex justify-between">
+      <div class="flex justify-between flex-col md:flex-row gap-5 md:gap-0">
         <div
           id="fishing"
           class="basis-[30%] h-40 w-80 flex justify-center items-center gap-4 hover:bg-black hover:text-white duration-700 border border-black p-4"
@@ -99,7 +141,7 @@
         </div>
       </div>
 
-      <div class="flex justify-between">
+      <div class="flex justify-between flex-col md:flex-row gap-5 md:gap-0">
         <div
           id="swimming"
           class="basis-[30%] h-40 w-80 flex justify-center items-center gap-4 hover:bg-black hover:text-white duration-700 border border-black p-4"
@@ -230,17 +272,28 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-[#F9F7F5] flex justify-between mt-24 px-7 py-6 pr-14">
-      <img src="assests/logo blis 1.png" alt="" srcset="" />
+    <footer
+      class="bg-[#F9F7F5] flex flex-col md:flex-row justify-between mt-7 md:mt-24 px-3 md:px-7 py-6 pr-4 md:pr-14 items-center md:items-start"
+    >
+      <img
+        class="w-24 md:w-[10%]"
+        src="assests/logo blis 1.png"
+        alt=""
+        srcset=""
+      />
 
-      <div class="flex flex-col">
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">About Us</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
 
-      <div>
-        <p class="old-font text-lg">Quick Links</p>
-        <div class="flex flex-col mt-3 text-[#474341]">
+      <div class="flex flex-col w-full md:w-[10%]">
+        <p class="old-font text-lg mr-4 md:mr-0">Quick Links</p>
+        <div
+          class="flex flex-row md:flex-col w-[100%] justify-between md:justify-normal items-center md:items-start md:w-auto md:mt-3 mt-0 text-[#474341]"
+        >
           <a href="">Bookings</a>
           <a href="">Rooms</a>
           <a href="">Services</a>
@@ -248,16 +301,37 @@
         </div>
       </div>
 
-      <div>
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">Contact</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
 
-      <div>
+      <div class="flex flex-col my-4 md:my-0 w-full md:w-[10%]">
         <p class="old-font text-lg">Get Social</p>
-        <p class="ibm-font">This is for Bliss regency demo.</p>
+        <p class="ibm-font">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
       </div>
     </footer>
+
+    <!-- Copyright Section -->
+    <section
+      class="bg-[#F9F7F5] py-5 flex flex-col md:flex-row items-center gap-3 md:gap-0 md:items-start justify-around px-3 md:px-0"
+    >
+      <p class="text-[#474341] text-center md:text-left">
+        © 2021 Copyright Bliss regency. All rights reserved
+      </p>
+      <div class="flex">
+        <p class="text-[#474341]">Payments Method:</p>
+        <div class="flex gap-3 ml-3 items-center">
+          <img src="assests/fa-brands_cc-visa.png" alt="" />
+          <img src="assests/fa-brands_cc-mastercard.png" alt="" />
+          <img src="assests/fa-brands_cc-paypal.png" alt="" srcset="" />
+        </div>
+      </div>
+    </section>
     <script src="services.js"></script>
   </body>
 </html>

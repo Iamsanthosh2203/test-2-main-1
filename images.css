@@ -1,3 +1,7 @@
+html,
+body {
+  overflow-x: hidden;
+}
 .slider {
   position: relative;
   max-width: 80%;
@@ -75,4 +79,34 @@ button .fas {
   background-image: url("assests/WhatsApp Image 2023-06-28 at 09.47 6.png");
   background-position: center;
   background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  .slider {
+    height: 25rem; /* Adjust the height for mobile devices */
+  }
+
+  .slide {
+    width: 100%; /* Adjust the width for mobile devices */
+    height: 25rem; /* Adjust the height for mobile devices */
+  }
+
+  .btn-slide {
+    height: 4rem; /* Adjust the height for mobile devices */
+    width: 4rem; /* Adjust the width for mobile devices */
+  }
+
+  .prev {
+    left: 1.5rem; /* Adjust the left position for mobile devices */
+  }
+
+  .next {
+    right: 2rem; /* Adjust the right position for mobile devices */
+  }
+
+  .dot {
+    width: 8px; /* Adjust the width for mobile devices */
+    height: 8px; /* Adjust the height for mobile devices */
+    margin: 10px 4px; /* Adjust the margin for mobile devices */
+  }
 }
