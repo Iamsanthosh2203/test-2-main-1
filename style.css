@@ -178,4 +178,8 @@ button .fas {
     background-size: cover;
     background-position: center;
   }
+  #divGrid {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
 }
