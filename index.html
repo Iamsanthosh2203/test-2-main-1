@@ -31,7 +31,11 @@
   </head>
   <body>
     <!-- Header Section -->
-    <header class="h-auto md:h-screen text-white bg-fixed w-full">
+    <header class="h-auto md:h-screen text-white bg-fixed w-full relative">
+      <video
+        src="assests/Bliss video.mp4"
+        class="w-full h-full hidden md:block -z-20"
+      ></video>
       <!-- Navigation Section -->
       <div id="blurryscroll" aria-hidden="true"></div>
       <nav
@@ -306,10 +310,7 @@
         </div>
 
         <!-- 6 -->
-        <div
-          class="flex flex-col self-center"
-          style="grid-column-start: 1; grid-column-end: 4"
-        >
+        <div id="divGrid" class="flex flex-col self-center">
           <button
             data-aos="fade-left"
             class="py-3 px-4 bg-[#27221F] rounded-full text-white ibm-font"
